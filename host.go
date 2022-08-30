@@ -39,13 +39,14 @@ const (
 // Host represent Zabbix host object
 // https://www.zabbix.com/documentation/3.2/manual/api/reference/host/object
 type Host struct {
-	HostID     string        `json:"hostid,omitempty"`
-	Host       string        `json:"host"`
-	Available  AvailableType `json:"available,string"`
-	Error      string        `json:"error"`
-	Name       string        `json:"name"`
-	Status     StatusType    `json:"status,string"`
-	UserMacros Macros        `json:"macros,omitempty"`
+	HostID      string        `json:"hostid,omitempty"`
+	Host        string        `json:"host"`
+	Available   AvailableType `json:"available,string"`
+	Error       string        `json:"error"`
+	Name        string        `json:"name"`
+	Description string        `json:"description,omitempty"`
+	Status      StatusType    `json:"status,string"`
+	UserMacros  Macros        `json:"macros,omitempty"`
 
 	RawInventory json.RawMessage `json:"inventory,omitempty"`
 	Inventory    Inventory       `json:"-"`
